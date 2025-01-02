@@ -29,6 +29,7 @@ class BaseClient:
         romania=IDENTITY.format(tld=".ro"),
         sweden=IDENTITY.format(tld=".se"),
         australia=IDENTITY.format(tld=".com.au"),
+        brazil=IDENTITY.format(tld=".bet.br")
     )
 
     IDENTITY_CERT_URLS = collections.defaultdict(
@@ -37,6 +38,7 @@ class BaseClient:
         italy=IDENTITY_CERT.format(tld=".it"),
         romania=IDENTITY_CERT.format(tld=".ro"),
         sweden=IDENTITY_CERT.format(tld=".se"),
+        brazil=IDENTITY_CERT.format(tld=".bet.br")
     )
 
     API_URLS = collections.defaultdict(lambda: API)
@@ -45,6 +47,7 @@ class BaseClient:
         lambda: NAVIGATION.format(tld=".com", locale="en"),
         spain=NAVIGATION.format(tld=".es", locale="es"),
         italy=NAVIGATION.format(tld=".it", locale="it"),
+        brazil=NAVIGATION.format(tld=".bet.br", locale="br")
     )
 
     SESSION_TIMEOUT = collections.defaultdict(lambda: 12 * 60 * 60, italy=20 * 60)
