@@ -10,7 +10,7 @@ from .utils import default_user_agent
 
 IDENTITY = "https://identitysso.betfair{tld}/api/"
 IDENTITY_CERT = "https://identitysso-cert.betfair{tld}/api/"
-API = "https://api.betfair.com/exchange/"
+API = "https://api.betfair{tld}}/exchange/"
 NAVIGATION = (
     "https://api.betfair{tld}/exchange/betting/rest/v1/{locale}/navigation/menu.json"
 )
@@ -41,7 +41,10 @@ class BaseClient:
         brazil=IDENTITY_CERT.format(tld=".bet.br")
     )
 
-    API_URLS = collections.defaultdict(lambda: API)
+    API_URLS = collections.defaultdict(
+        lambda: NAVIGATION.format(tld=".com"),
+        brazil=IDENTITY_CERT.format(tld=".bet.br")
+        )
 
     NAVIGATION_URLS = collections.defaultdict(
         lambda: NAVIGATION.format(tld=".com", locale="en"),
