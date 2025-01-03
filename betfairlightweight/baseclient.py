@@ -10,7 +10,8 @@ from .utils import default_user_agent
 
 IDENTITY = "https://identitysso.betfair{tld}/api/"
 IDENTITY_CERT = "https://identitysso-cert.betfair{tld}/api/"
-API = "https://api.betfair{tld}}/exchange/"
+#API = "https://api.betfair{tld}}/exchange/"
+API = "https://apps.betfair{tld}/visualisers/betting"
 NAVIGATION = (
     "https://api.betfair{tld}/exchange/betting/rest/v1/{locale}/navigation/menu.json"
 )
