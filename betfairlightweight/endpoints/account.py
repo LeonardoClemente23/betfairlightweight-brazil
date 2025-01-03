@@ -128,4 +128,5 @@ class Account(BaseEndpoint):
 
     @property
     def url(self) -> str:
-        return "%s%s" % (self.client.api_uri, "account/json-rpc/v1")
+        #return "%s%s" % (self.client.api_uri, "account/json-rpc/v1")
+        return "%s%s" % (self.client.api_uri, "account")
